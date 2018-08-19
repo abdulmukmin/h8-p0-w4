@@ -10,20 +10,13 @@ function changeMe(arr) {
         obj.fristname=arr[a][0]
         obj.lastname=arr[a][1]
         obj.gender=arr[a][2]
-        obj.age=arr[a][3]
-        if (obj.age===undefined){
+        if (arr[a][3]===undefined){
             obj.age="invalid Birth Year"
+        } else {
+            obj.age=new Date().getFullYear() - arr[a][3]
         }
-        if(arr[a][3]===undefined){
-            arr[a][3] = 'invalid birth date'
-        }
+
         console.log(obj)
-        //console.log({
-        //     fristname: arr[a][0],
-        //     lastname: arr[a][1],
-        //     gender: arr[a][2],
-        //     age: arr[a][3]
-        // })
     } 
     //console.log(obj)
 }
