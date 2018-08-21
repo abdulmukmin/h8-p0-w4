@@ -13,16 +13,16 @@ function kaliTerusRekursif(angka) {
         ngotrekAngka = angka.substr(1)
         var kalikan = angka[0]
         console.log(Number(kalikan), " * ")
-        var kampret = Number(kalikan) * kaliTerusRekursif(ngotrekAngka) //-> returnnya dimasukkan ke variabel dulu untuk dikondisikan lagi || jadi hasilnya sudah dilihat meski belum ditampilkan
-        //console.log('hasil kampret', kampret)
-        var panjang = String(kampret).length;
+        var kaliTerusRekrusif = Number(kalikan) * kaliTerusRekursif(ngotrekAngka) //-> returnnya dimasukkan ke variabel dulu untuk dikondisikan lagi || jadi hasilnya sudah dilihat meski belum ditampilkan
+        //console.log('hasil kaliTerusRekrusif', kaliTerusRekrusif)
+        var panjang = String(kaliTerusRekrusif).length;
         if( panjang > 1){
-            console.log(kampret)
-            return kaliTerusRekursif(kampret);
+            console.log(kaliTerusRekrusif)
+            return kaliTerusRekursif(kaliTerusRekrusif);
         }
         else{
             console.log(ngotrekAngka)
-            return kampret;
+            return kaliTerusRekrusif;
         }
     }
   }
